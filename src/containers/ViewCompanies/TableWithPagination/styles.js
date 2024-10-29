@@ -27,15 +27,15 @@ export const Table = styled.table`
   }
 
   tr:nth-child(even) {
-    background-color: #444; /* Cinza escuro para as linhas pares */
+    background-color: #444;
   }
 
   tr:nth-child(odd) {
-    background-color: #3c3f41; /* Cinza escuro para as linhas ímpares */
+    background-color: #3c3f41;
   }
 
   td {
-    color: #ddd; /* Texto mais claro para contraste */
+    color: #ddd;
   }
 
   @media (max-width: 768px) {

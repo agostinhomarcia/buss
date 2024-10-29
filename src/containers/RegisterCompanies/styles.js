@@ -9,7 +9,6 @@ export const Container = styled.div`
   background-color: #282c34;
   min-height: 100vh;
 
-  /* Para telas menores */
   @media (max-width: 768px) {
     padding: 10px;
   }
@@ -21,7 +20,6 @@ export const Title = styled.h1`
   margin-bottom: 16px;
   text-align: center;
 
-  /* Reduzir tamanho do título em telas menores */
   @media (max-width: 768px) {
     font-size: 28px;
   }
@@ -37,7 +35,6 @@ export const Description = styled.p`
   margin-bottom: 24px;
   text-align: center;
 
-  /* Ajustes para dispositivos menores */
   @media (max-width: 768px) {
     font-size: 16px;
     margin-bottom: 20px;
@@ -56,7 +53,6 @@ export const FormGroup = styled.div`
   width: 100%;
   max-width: 400px;
 
-  /* Ajuste da largura do formulário para telas menores */
   @media (max-width: 768px) {
     max-width: 100%;
   }

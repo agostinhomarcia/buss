@@ -9,7 +9,6 @@ export const Container = styled.div`
   background-color: #282c34;
   min-height: 100vh;
 
-  /* Ajuste de padding para telas menores */
   @media (max-width: 768px) {
     padding: 10px;
   }
@@ -21,7 +20,6 @@ export const Title = styled.h1`
   font-size: 36px;
   text-align: center;
 
-  /* Tamanhos de fonte reduzidos para telas menores */
   @media (max-width: 768px) {
     font-size: 28px;
   }

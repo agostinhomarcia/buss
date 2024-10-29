@@ -31,16 +31,13 @@ function TableWithPagination({
   }, []);
 
   useEffect(() => {
-    // Extrai o número da página da URL
     const urlParams = new URLSearchParams(window.location.search);
     const pageParam = urlParams.get("page");
 
-    // Definicao da página atual com base no parâmetro da URL
     if (pageParam) {
       setCurrentPage(parseInt(pageParam));
     }
 
-    // Define o número total de páginas com base no número de empresas e itens por página
     setTotalPages(Math.ceil(companies.length / itemsPerPage));
   }, [companies, itemsPerPage]);
 
@@ -62,7 +59,7 @@ function TableWithPagination({
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = date.getDate().toString().padStart(2, "0");
-    const month = (date.getMonth() + 1).toString().padStart(2, "0"); // Mês começa do zero
+    const month = (date.getMonth() + 1).toString().padStart(2, "0");
     const year = date.getFullYear();
     const hours = date.getHours().toString().padStart(2, "0");
     const minutes = date.getMinutes().toString().padStart(2, "0");
