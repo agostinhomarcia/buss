@@ -1,6 +1,6 @@
 # BusinessFlow
 
-## 🚀 link dos deploys na vercel:
+## 🚀 Conhaça o projeto: [Projeto](https://buss-zeta.vercel.app/login)
 
 ## 🔏 Como Fazer Login?
 
