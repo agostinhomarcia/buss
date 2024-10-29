@@ -1,138 +1,132 @@
+// src/components/styles.js
+
 import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #3a3a3a, #5a5a5a);
+`;
+
+export const LoginCard = styled.div`
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 
   img {
-    width: 200px;
-    border-radius: 10px;
-    margin-top: 30px;
+    width: 120px;
+    margin-bottom: 20px;
   }
 
   h1 {
-    margin-top: 12px;
-    color: #fff;
-    font-size: 50px;
-    text-align: center;
+    font-size: 2.4rem;
+    color: #333;
+    margin-bottom: 8px;
   }
 
   p {
-    margin-top: 30px;
-    color: #fff;
-    font-size: 25px;
-    text-align: center;
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 1rem;
   }
 
-  h3 {
-    margin-top: 25px;
-    color: #fff;
-  }
-
-  input {
+  .input-group {
     width: 100%;
-    max-width: 300px;
-    height: 30px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 10px;
-    padding-left: 10px;
-    font-size: 16px;
-  }
-
-  .password-container {
-    position: relative;
-    display: flex;
-    align-items: center;
+    margin-bottom: 20px;
+    text-align: left;
 
     input {
-      padding-right: 40px;
+      width: 100%;
+      height: 45px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 0 15px;
+      font-size: 1rem;
+      margin-bottom: 12px;
+      &:focus {
+        border-color: #4b79a1;
+        outline: none;
+      }
     }
 
-    .eye-icon {
-      position: absolute;
-      right: -65px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #666;
-      bottom: -2px;
-      font-size: 1.2em;
+    .password-container {
+      position: relative;
       display: flex;
       align-items: center;
+
+      input {
+        padding-right: 40px;
+      }
+
+      .eye-icon {
+        position: absolute;
+        right: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #555;
+        font-size: 1.2em;
+      }
+    }
+
+    label {
+      color: #333;
+      font-size: 0.9rem;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 8px;
     }
   }
 
-  label {
-    color: #fff;
-    margin-top: 10px;
-  }
-
-  button {
-    margin-top: 20px;
+  .login-button {
     width: 100%;
-    max-width: 120px;
-    height: 40px;
-    background-color: #dcdcdc;
+    height: 45px;
+    background-color: #4b79a1;
+    color: #fff;
     border: none;
-    border-radius: 10px;
-    font-size: 17px;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-  }
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 
-  @media (max-width: 768px) {
-    img {
-      width: 150px;
-    }
-
-    h1 {
-      font-size: 35px;
-    }
-
-    p {
-      font-size: 20px;
-    }
-
-    input {
-      max-width: 250px;
-      height: 35px;
-      font-size: 16px;
-    }
-
-    button {
-      max-width: 100px;
-      font-size: 15px;
+    &:hover {
+      background-color: #3b668e;
     }
   }
 
-  @media (max-width: 480px) {
-    img {
-      width: 120px;
-    }
+  .google-login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 45px;
+    background-color: #ffffff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
-    h1 {
-      font-size: 28px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    input {
-      max-width: 200px;
-      height: 30px;
-      font-size: 14px;
-      padding-left: 15px;
-    }
-
-    button {
-      max-width: 90px;
-      font-size: 14px;
-      height: 35px;
+    &:hover {
+      background-color: #f5f5f5;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
   }
 `;

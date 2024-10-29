@@ -1,15 +1,30 @@
-import { Container } from "./styles";
-import Logo from "../../assets/logo.png";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { Container, LoginCard } from "./styles";
+import Logo from "../../assets/logo.png";
+import { FcGoogle } from "react-icons/fc";
+import { auth, provider } from "../../firebase/firebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      toast.success(`Bem-vindo, ${user.displayName}`);
+      window.location.href = "/Home";
+    } catch (error) {
+      toast.error("Erro ao fazer login com Google");
+      console.error("Erro de autenticação:", error);
+    }
+  };
 
   const handleLogin = () => {
     if (username === "admin" && password === "123456") {
@@ -21,11 +36,7 @@ function Login() {
         localStorage.setItem("username", username);
       }
       const redirectUrl = getCookie("redirectUrl");
-      if (redirectUrl) {
-        window.location.href = redirectUrl;
-      } else {
-        window.location.href = "/Home";
-      }
+      window.location.href = redirectUrl || "/Home";
     } else {
       toast.error("Nome de usuário ou senha incorretos");
     }
@@ -45,38 +56,47 @@ function Login() {
   return (
     <Container>
       <ToastContainer />
-      <img src={Logo} alt="logo" />
-      <h1>BusinessFlow</h1>
-      <p> Controle de Gestão de Empresas e Parceiros</p>
-      <p>Faça login para continuar</p>
-      <h3>Insira seu Nome de Usuário:</h3>
-      <input
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <h3>Insira sua Senha:</h3>
-      <div className="password-container">
-        <input
-          type={showPassword ? "text" : "password"}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button
-          type="button"
-          onClick={() => setShowPassword((prev) => !prev)}
-          className="eye-icon"
-        >
-          {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+      <LoginCard>
+        <img src={Logo} alt="logo" />
+        <h1>BusinessFlow</h1>
+        <p>Controle de Gestão de Empresas e Parceiros</p>
+        <div className="input-group">
+          <input
+            type="text"
+            placeholder="Nome de Usuário"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <div className="password-container">
+            <input
+              type={showPassword ? "text" : "password"}
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword((prev) => !prev)}
+              className="eye-icon"
+            >
+              {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+            </button>
+          </div>
+          <input
+            type="checkbox"
+            checked={keepLoggedIn}
+            onChange={() => setKeepLoggedIn(!keepLoggedIn)}
+          />
+          <label>Mantenha-me conectado</label>
+        </div>
+        <button onClick={handleLogin} className="login-button">
+          Entrar
         </button>
-      </div>
-      <input
-        type="checkbox"
-        checked={keepLoggedIn}
-        onChange={() => setKeepLoggedIn(!keepLoggedIn)}
-      />
-      <label>Mantenha-me conectado</label>
-      <button onClick={handleLogin}>Entrar</button>
+        <button onClick={handleGoogleLogin} className="google-login-btn">
+          <FcGoogle size={20} style={{ marginRight: "8px" }} />
+          Login com Google
+        </button>
+      </LoginCard>
     </Container>
   );
 }
