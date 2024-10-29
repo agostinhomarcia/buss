@@ -59,7 +59,7 @@ export const Container = styled.div`
       border: none;
       cursor: pointer;
       color: #666;
-      bottom: -1px;
+      bottom: -2px;
       font-size: 1.2em;
       display: flex;
       align-items: center;
