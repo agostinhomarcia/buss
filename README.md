@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# BusinessFlow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 link dos deploys na vercel:
 
-## Available Scripts
+## 🔏 Como Fazer Login?
 
-In the project directory, you can run:
+Para fazer login utilize os dados:
 
-### `npm start`
+Nome de usuário: admin (tudo minúsculo)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Senha: 123456
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Marque o checkbox Manter Conectado para salvar o nome de usuário nos cookies!
 
-### `npm test`
+## 📱 Tecnologias Utilizadas:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React.js | styled-components | vite | vercel | Javascript, tabela com paginação.
 
-### `npm run build`
+Conexão ao backend via Axios dos métodos `get` | `post` | `put` | `delete`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Endpoints**:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `GET /` - Listar todos
+- `GET /:id` - Listar por ID
+- `POST /` - Cadastrar parceiro
+- `PUT /:id` - Atualizar parceiro
+- `DELETE /:id` - Deletar parceiro
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Como rodar aplicação na sua máquina? 
 
-### `npm run eject`
+Comandos:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`npm install`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`mpm run dev `
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ✍️ Como foi feito o projeto? 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Implementação de uma página de login com as seguintes funcionalidades:
 
-## Learn More
+Opção "Manter Conectado": Armazena o nome de usuário nos cookies para manter o usuário logado entre sessões.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Verificação de Autenticação: Impede o acesso a áreas restritas caso o usuário não esteja autenticado.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Cadastro, Edição e Exclusão de Dados: Permite a criação, modificação e exclusão de parceiros e empresas através de componentes dedicados.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Gerenciamento de Rotas e Redirecionamento: Redireciona automaticamente para a página solicitada, caso o usuário acesse um link direto para uma página específica (ex. página 6 de uma tabela). Se não estiver logado, o usuário é direcionado ao login e, após autenticação, é levado diretamente para a página que tentou acessar.
