@@ -4,27 +4,12 @@ import "react-toastify/dist/ReactToastify.css";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Container, LoginCard } from "./styles";
 import Logo from "../../assets/logo.png";
-import { FcGoogle } from "react-icons/fc";
-import { auth, provider } from "../../firebase/firebaseConfig";
-import { signInWithPopup } from "firebase/auth";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, provider);
-      const user = result.user;
-      toast.success(`Bem-vindo, ${user.displayName}`);
-      window.location.href = "/Home";
-    } catch (error) {
-      toast.error("Erro ao fazer login com Google");
-      console.error("Erro de autenticação:", error);
-    }
-  };
 
   const handleLogin = () => {
     if (username === "admin" && password === "123456") {
@@ -91,10 +76,6 @@ function Login() {
         </div>
         <button onClick={handleLogin} className="login-button">
           Entrar
-        </button>
-        <button onClick={handleGoogleLogin} className="google-login-btn">
-          <FcGoogle size={20} style={{ marginRight: "8px" }} />
-          Login com Google
         </button>
       </LoginCard>
     </Container>
