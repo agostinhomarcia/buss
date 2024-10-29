@@ -12,12 +12,12 @@ export const Table = styled.table`
   width: 90%;
   border-collapse: collapse;
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #333;
 
   th, td {
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #555;
   }
 
   th {
@@ -27,7 +27,15 @@ export const Table = styled.table`
   }
 
   tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #444; /* Cinza escuro para as linhas pares */
+  }
+
+  tr:nth-child(odd) {
+    background-color: #3c3f41; /* Cinza escuro para as linhas ímpares */
+  }
+
+  td {
+    color: #ddd; /* Texto mais claro para contraste */
   }
 
   @media (max-width: 768px) {
@@ -60,61 +68,28 @@ export const PaginationContainer = styled.div`
   span {
     margin: 0 10px;
     font-weight: bold;
-  }
-
-  @media (max-width: 768px) {
-    span {
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    span {
-      font-size: 12px;
-      margin: 0 5px;
-    }
+    color: #ddd;
   }
 `;
 
 export const EditRow = styled.tr`
-  background-color: #e8f4ff;
-
+  background-color: #555;
+  
   td {
     padding: 10px;
-  }
-
-  input {
-    margin-right: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f5f8fa;
-    color: #222;
-
-    @media (max-width: 768px) {
-      width: 100%;
-      font-size: 14px;
-    }
-
-    @media (max-width: 480px) {
-      width: 100%;
-      font-size: 12px;
-      padding: 4px;
-    }
   }
 `;
 
 export const Button = styled.button`
   background-color: #007bff;
   border: none;
-  color: white;
+  color: #ffffff;
   padding: 8px 12px;
   margin: 0 5px;
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  color: #222;
 
   &:hover {
     background-color: #0056b3;

@@ -103,12 +103,12 @@ export const Colunas = styled.div`
   }
 
   .delete-button {
-    background-color: #dc3545;
+    background-color: #007bff;
     color: #ffffff;
   }
 
   .delete-button:hover {
-    background-color: #c82333;
+    background-color: #0056b3;
   }
 
   .update-button {
