@@ -3,11 +3,13 @@ import Logo from "../../assets/logo.png";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = () => {
     if (username === "admin" && password === "123456") {
@@ -53,11 +55,20 @@ function Login() {
         onChange={(e) => setUsername(e.target.value)}
       />
       <h3>Insira sua Senha:</h3>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
+      <div className="password-container">
+        <input
+          type={showPassword ? "text" : "password"}
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button
+          type="button"
+          onClick={() => setShowPassword((prev) => !prev)}
+          className="eye-icon"
+        >
+          {showPassword ? <AiFillEyeInvisible /> : <AiFillEye />}
+        </button>
+      </div>
       <input
         type="checkbox"
         checked={keepLoggedIn}
