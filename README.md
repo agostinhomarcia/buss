@@ -7,22 +7,18 @@
 <div align="center">
    <figure style="display: inline-block; margin: 10px;">
       <img src="/public/login.png" alt="Tela de Login" width="250"/>
-      <figcaption>Login</figcaption>
    </figure>
    
    <figure style="display: inline-block; margin: 10px;">
       <img src="/public/home.png" alt="Tela Inicial" width="250"/>
-      <figcaption>Home</figcaption>
    </figure>
 
    <figure style="display: inline-block; margin: 10px;">
       <img src="/public/view-companies.png" alt="Visualização de Empresas" width="250"/>
-      <figcaption>Ver Empresas</figcaption>
    </figure>
 
    <figure style="display: inline-block; margin: 10px;">
       <img src="/public/view-partner.png" alt="Visualização de Parceiros" width="250"/>
-      <figcaption>Ver Parceiros</figcaption>
    </figure>
 </div>
 
