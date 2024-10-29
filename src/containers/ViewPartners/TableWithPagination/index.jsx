@@ -82,9 +82,9 @@ function TableWithPagination({
         <thead>
           <tr>
             <th>Data de Criação</th>
-            <th>Nome da Empresa</th>
+            <th>Nome do Parceiro</th>
             <th>URL</th>
-            <th>Empresa Ativa</th>
+            <th>Parceiro Ativo</th>
             <th>Repositório Git</th>
             <th>Ações</th>
           </tr>
