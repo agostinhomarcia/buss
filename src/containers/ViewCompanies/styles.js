@@ -9,6 +9,8 @@ export const Container = styled.div`
   min-height: 100vh;
   background-color: #282c34;
 
+  margin-top: 50px;
+
   h1 {
     color: #ffffff;
     font-size: 36px;

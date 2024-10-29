@@ -9,6 +9,8 @@ export const Container = styled.div`
   background-color: #282c34;
   min-height: 100vh;
 
+   margin-top: 20px;
+
   @media (max-width: 768px) {
     padding: 10px;
   }
