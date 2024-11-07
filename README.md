@@ -1,6 +1,6 @@
 # BusinessFlow
 
-## 🚀 Conhaça o projeto: [Projeto](https://buss-zeta.vercel.app/login)
+## 🚀 Conheça o projeto: [Deploy do projeto](https://buss-zeta.vercel.app/login)
 
  <h2 align="center">📺</h2>
 
