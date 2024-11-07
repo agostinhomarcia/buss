@@ -1,5 +1,15 @@
 # BusinessFlow
 
+## 🔏 Como Fazer Login no sistema?
+
+Para fazer login utilize os dados:
+
+Nome de usuário: admin (tudo minúsculo)
+
+Senha: 123456
+
+Marque o checkbox Manter Conectado para salvar o nome de usuário nos cookies!
+
 ## 🚀 Conheça o projeto: [Deploy do projeto](https://buss-zeta.vercel.app/login)
 
  <h2 align="center">📺</h2>
@@ -20,16 +30,6 @@
    </figure>
 
 </div>
-
-## 🔏 Como Fazer Login?
-
-Para fazer login utilize os dados:
-
-Nome de usuário: admin (tudo minúsculo)
-
-Senha: 123456
-
-Marque o checkbox Manter Conectado para salvar o nome de usuário nos cookies!
 
 ## 📱 Tecnologias Utilizadas:
 
