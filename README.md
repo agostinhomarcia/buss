@@ -5,21 +5,20 @@
  <h2 align="center">📺</h2>
 
 <div align="center">
-   <figure >
-      <img src="/public/login.png" alt="Tela de Login" width="250"/>
-   </figure>
-   
    <figure>
-      <img src="/public/home.png" alt="Tela Inicial" width="250"/>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmRnM21rM3VvdXpvbW4wYXRwYXRlaGYzejNmM2gza3kxZ2wzZzdxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jeojafABnlzdNotl5d/giphy.gif" alt="Visualização de Parceiros" width="500"/>
+   </figure>
+   <figure>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDN0ZzBhcjYyeWZnbXR1Y2g3bmF4b3RocnJuMnl5eHQ3bm50aWNhdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Jf4zAwySlcNdtMfQRT/giphy.gif" alt="Tela de Login" width="500"/>
+    </figure>
+   <figure>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDZoYzNhOHk5YjBqMzBmbGViYjY0emp0aDJmYW96d2JybDVsbDBwcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VAvxGuruXCxcce41zY/giphy.gif" alt="Tela Inicial" width="500"/>
    </figure>
 
    <figure >
-      <img src="/public/view-companies.png" alt="Visualização de Empresas" width="250"/>
+      <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzUzd3MxbWJhb2ppOWhueDdhMTE5Ym9xODVtendyYzBvMjQ3ZHMzdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zJTxhQhDmxAP0F31wd/giphy.gif" alt="Visualização de Empresas" width="500"/>
    </figure>
 
-   <figure>
-      <img src="/public/view-partner.png" alt="Visualização de Parceiros" width="250"/>
-   </figure>
 </div>
 
 ## 🔏 Como Fazer Login?
